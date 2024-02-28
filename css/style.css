@@ -32,7 +32,7 @@ body {
 main {
   background-color: var(--White);
   padding: 60px;
-  max-width: 1440px;
+  max-width: 600px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -147,6 +147,7 @@ main {
   flex-direction: column;
   gap: 12px;
   padding: 0px 10px;
+  margin-bottom: 48px;
 }
 
 .instructions h2 {
@@ -154,21 +155,95 @@ main {
   color: var(--Nutmeg);
 }
 
-.instructionsList li {
-  font: 400 1rem "Outfit", sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding-left: 8px;
-  margin-bottom: 10px;
-  list-style-type: decimal;
+.instructionsSteps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
-.instructionsList span {
-  font-weight: 600;
+.instructionsSteps h4 {
+  font: 600 1rem "Outfit", sans-serif;
+  margin-bottom: 4px;
 }
 
-.number {
-  margin-right: 10px;
+.instructionsSteps span {
+  display: inline-block;
+  font: 600 1rem "Outfit", sans-serif;
   color: var(--Nutmeg);
+  margin-right: 16px;
+}
+
+.instructionsSteps p {
+  margin-left: 30px;
+}
+
+/* Nutrition */
+.nutrition {
+  padding: 0px 10px;
+}
+
+.nutrition h2 {
+  font: 400 1.6rem "Young Serif", serif;
+  color: var(--Nutmeg);
+  margin-bottom: 12px;
+}
+
+.nutrition p {
+  font: 400 1rem "Outfit", sans-serif;
+  margin-bottom: 20px;
+}
+
+.nutritionChartItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--LightGrey);
+}
+
+.border {
+  border-bottom: none;
+}
+
+.nutritionChartItem h4 {
+  color: var(--WengeBrown);
+  font: 400 1rem "Outfit", sans-serif;
+}
+
+.nutritionChartItem span {
+  font: 700 1rem "Outfit";
+  color: var(--Nutmeg);
+}
+
+/* Media Query */
+
+@media (max-width: 400px) {
+  body {
+    padding: 0px;
+  }
+
+  main {
+    padding: 0px;
+  }
+  .header {
+    padding: 0px;
+  }
+
+  .headerInfo {
+    padding: 20px;
+  }
+
+  .ingredients {
+    padding: 0px 20px;
+  }
+
+  .instructions {
+    padding: 0 20px;
+  }
+
+  .nutrition {
+    padding: 0px 20px;
+    padding-bottom: 40px;
+  }
+
 }
