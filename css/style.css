@@ -34,12 +34,18 @@ main {
   padding: 60px;
   max-width: 1440px;
   margin: 0 auto;
+  border-radius: 10px;
+}
+
+.headerImg img {
+  object-fit: contain;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  padding: 0px 10px;
 }
 
 .headerInfo {
@@ -59,6 +65,10 @@ main {
   max-width: 60ch;
 }
 
+.headerPreparation {
+  margin-bottom: 48px;
+}
+
 .headerPreparation h2 {
   font: 700 1.3rem "Outfit", sans-serif;
   color: var(--DarkRaspberry);
@@ -73,8 +83,92 @@ main {
 
 .headerPreparationList li {
   font: 400 1rem "Outfit", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.headerPreparationList li:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--DarkRaspberry);
+  margin-right: 24px;
 }
 
 .headerPreparationList li span {
   font-weight: 600;
+}
+
+/* Ingredients */
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 48px;
+  padding: 0px 10px;
+}
+
+.ingredients h2 {
+  font: 400 1.6rem "Young Serif", serif;
+  color: var(--Nutmeg);
+}
+
+.ingredientsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredientsList li {
+  font: 400 1rem "Outfit", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.ingredientsList li:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--Nutmeg);
+  margin-right: 24px;
+}
+
+/* Instructions */
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0px 10px;
+}
+
+.instructions h2 {
+  font: 400 1.6rem "Young Serif", serif;
+  color: var(--Nutmeg);
+}
+
+.instructionsList li {
+  font: 400 1rem "Outfit", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 8px;
+  margin-bottom: 10px;
+  list-style-type: decimal;
+}
+
+.instructionsList span {
+  font-weight: 600;
+}
+
+.number {
+  margin-right: 10px;
+  color: var(--Nutmeg);
 }
